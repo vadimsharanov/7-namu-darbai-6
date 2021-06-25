@@ -76,26 +76,18 @@ console.log(studentasMasyvas);
 // document.getElementById("lankomumas").innerText = 
 
 for ( let i =0; i < studentasMasyvas.length; i++){
-    let divas = document.createElement("div");
+    let divas = document.createElement("tr");
     divas.classList.add("lentele")
     divas.innerText = studentasMasyvas[i].vardas + "   " +  studentasMasyvas[i].pavarde;
     document.querySelector(".lankomumas").append(divas);
+    document.querySelector(".lentele").className = "lentele" + i;
 }
+
+
 for ( let i =0; i < studentasMasyvas.length; i++){
-    let divas = document.createElement("div");
-    divas.classList.add("lentele2")
-    divas.innerText = lankomumasMasyvas[1]
-    document.querySelector(".lankomumas2").append(divas);
+    let divas = document.createElement("th");
+    divas.classList.add("lankomumas" + i);
+    divas.innerText = lankomumasMasyvas
+    document.querySelector(".lentele" + i).append(divas);
+    document.querySelector(".lentele" + i).style.border = "1px solid black"
 }
-
-// for (let j=0; j < 20 ; j++){
-//     let divas2 = document.createElement("div");
-//     divas2.classList.add("lentele2")
-//     divas2.innerText = lankomumasMasyvas[i]
-//     document.querySelector(".lankomumas2").append(divas2);
-// }
-
-// }
-
-
-
